@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+ <title>road accident </title>
+<!--
+
+TemplateMo 548 Training Studio
+
+https://templatemo.com/tm-548-training-studio
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../static/css/templatemo-training-studioss.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">Road   <em> Accident</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                 
+                            <li class="scroll-to-section"><a href="{{url_for('login')}}">Login</a></li>
+							  <li class="scroll-to-section"><a href="{{url_for('upload')}}">Upload</a></li>
+							 
+							  	  <li class="scroll-to-section"><a href="{{url_for('home')}}">prediction</a></li>
+								   <li class="scroll-to-section"><a href="{{url_for('performance')}}">performance_analysis</a></li>
+								   <li class="scroll-to-section"><a href="{{url_for('chart')}}">Chart</a></li>
+								    <li class="scroll-to-section"><a href="{{url_for('first')}}">logout</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="../static/images/gym-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                 <h2>A Road Accident Prediction  </h2>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Features Item Start ***** -->
+    
+    <!-- ***** Features Item End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Our Classes Start ***** -->
+    
+    <!-- ***** Our Classes End ***** -->
+    
+    <section class="section" id="schedule">
+        <div class="container">
+          
+            <div class="row">
+                
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="schedule-table filtering">
+                         <html >
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+ <center> <title>Road Accident occurrence</title>  </center>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" type="text/css">
+  
+   	 <style>
+
+
+body  {
+ 
+background-color: #cccccc;
+}
+ 
+ 
+    </style>
+</head>
+
+<body>
+ <div>
+      
+ </br>
+<center>	<h1 class= "heading" >Road Accident Prediction</h1></center>
+	 
+	<div class= "container">
+    <form action="{{ url_for('predict')}}" method="post">
+             <div class="scrollable">
+			
+                <table>
+				<tbody>
+                    <td>State:</td>
+			<td>
+        <select name="state" id="state" required="required">
+            {% for state in states %}
+                <option value="{{state}}">{{state}}</option>
+            {% endfor %}
+        </select>
+    </td>
+                       <td>Junction:</td>
+       
+        <td>
+        <select name="junction" id="junction" required="required" >
+            {% for junction in junctions %}
+                <option value="{{junction}}">{{junction}}</option>
+            {% endfor %}
+        </select>
+		</td>
+						 </tbody>
+                    <!-- Row 1 -->
+                    <tbody>
+                        <td>Vechicle Age:</td>
+	   
+      <td>
+        <select name="vechicleAge" id="vechicleAge" required="required">
+            {% for age in vechicleAge %}
+                <option value="{{age}}">{{age}}</option>
+            {% endfor %}
+        </select>
+     
+        </td>
+                       
+      	  <td>Human's Age and Sex:</td>
+         	<td>
+        <select name="humanAgeSex" id="humanAgeSex" required="required">
+            {% for age_sex in humanAgeSex %}
+                <option value="{{age_sex}}">{{age_sex}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>
+					</br>
+                    <!-- Row 2 -->
+                    <tbody>
+                         <td>Person Without Precautions:</td>
+        	<td>
+        <select name="personWithoutPrecautions" id="personWithoutPrecautions" required="required">
+            {% for person in personWithoutPrecautions %}
+                <option value="{{person}}">{{person}}</option>
+            {% endfor %}
+        </select>
+       
+	   	</td>
+                        <td>Area:</td>
+         	<td>
+        <select name="areas" id="areas" required="required">
+            {% for area in areas %}
+                <option value="{{area}}">{{area}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>
+					</br>
+                    <!-- Row 3 -->
+                      <td>Type Of Place:</td>
+        	<td>
+        <select name="typeOfPlace" id="typeOfPlace" required="required">
+            {% for type in typeOfPlace %}
+                <option value="{{type}}">{{type}}</option>
+            {% endfor %}
+        </select>
+      	</td>
+        <td>Vehicle Load:</td>
+     	<td>
+        <select name="vehicleLoad" id="vehicleLoad" required="required">
+            {% for load in vehicleLoad %}
+                <option value="{{load}}">{{load}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>
+                    <!-- Row 4 --></br>
+                    <tbody>
+                        <td>Traffic Rules Violation:</td>
+       	<td>
+        <select name="trafficRulesViolation" id="trafficRulesViolation" required="required">
+            {% for violation in trafficRulesViolation %}
+                <option value="{{violation}}">{{violation}}</option>
+            {% endfor %}
+        </select>
+  
+        	</td>
+                       <td>Weather:</td>
+       	<td>
+        <select name="weather" id="weather" required="required">
+            {% for w in weather %}
+                <option value="{{w}}">{{w}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>
+                    <!-- Row 5 --></br>
+                    <tbody>
+                          <td>Vehicle Type and Sex:</td>
+     	<td>
+        <select name="vehicleTypeSex" id="vehicleTypeSex" required="required">
+            {% for type in vehicleTypeSex %}
+                <option value="{{type}}">{{type}}</option>
+            {% endfor %}
+        </select>
+    	</td>
+                       <td>Road Type:</td>
+       
+        	<td>
+        <select name="roadType" id="roadType" required="required">
+            {% for type in roadType %}
+                <option value="{{type}}">{{type}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>
+               <tbody>
+                         <td>License Type:</td>
+        	<td>
+        <select name="License" id="License" required="required">
+            {% for type in License %}
+                <option value="{{type}}">{{type}}</option>
+            {% endfor %}
+        </select>
+       	</td>
+        
+                       
+       
+        	 <td>Time:</td>
+        	<td>
+        <select name="time" id="time" required="required">
+            {% for t in time %}
+                <option value="{{t}}">{{t}}</option>
+            {% endfor %}
+        </select>
+			</td>
+                    </tbody>       
+                         
+                </table>
+				</br>
+				</br>
+                <div class="center">
+                  <center>  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button> </center> 
+                </div>
+            </div>
+        </form>
+		</br>
+		</br>
+		<h1>Prediction is:{{ prediction_text }}</h1>
+						 
+						 
+						 
+						 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Testimonials Starts ***** -->
+     >
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                
+                    
+                    <!-- You shall support us a little via PayPal to info@templatemo.com -->
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="../static/js/popper.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="../static/js/scrollreveal.min.js"></script>
+    <script src="../static/js/waypoints.min.js"></script>
+    <script src="../static/js/jquery.counterup.min.js"></script>
+    <script src="../static/js/imgfix.min.js"></script> 
+    <script src="../static/js/mixitup.js"></script> 
+    <script src="../static/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="../static/js/custom.js"></script>
+
+  </body>
+</html>
